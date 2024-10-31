@@ -3,6 +3,7 @@ import puppeteer from "puppeteer";
 async function main() {
   const browser = await puppeteer.launch({
     args: ["--no-sandbox"],
+    executablePath: '/usr/bin/chrome'
   });
   const page = (await browser.pages())[0];
   await page.goto("https://codesandbox.io/");

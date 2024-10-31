@@ -3,10 +3,9 @@ import puppeteer from "puppeteer";
 async function main() {
   const browser = await puppeteer.connect({
     
-     browserURL: "http://localhost:9222",
-  //     browserWSEndpoint:
-  //      "ws://127.0.0.1:9222/devtools/browser/7a1b0d67-f10b-40e4-8b4e-2fb76af1617f",
-  //
+       browserWSEndpoint:
+        "ws://127.0.0.1:9222/devtools/browser/150d8f7c-2f8c-4ac4-85af-d8887972f1e6",
+  
    });
   const page = (await browser.pages())[0];
   await page.goto("https://codesandbox.io/");
